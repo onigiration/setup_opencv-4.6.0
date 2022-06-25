@@ -18,14 +18,14 @@ sudo apt-get install -y libv4l-dev v4l-utils qv4l2 v4l2ucp
 sudo apt-get install -y curl
 sudo apt-get update
 
-echo "** Download opencv-3.4.16"
+echo "** Download opencv-4.6.0
 cd $folder
-curl -L https://github.com/opencv/opencv/archive/3.4.16.zip -o opencv-3.4.16.zip
-curl -L https://github.com/opencv/opencv_contrib/archive/3.4.16.zip -o opencv_contrib-3.4.16.zip
-unzip opencv-3.4.16.zip
-unzip opencv_contrib-3.4.16.zip
+curl -L https://github.com/opencv/opencv/archive/4.6.0-o opencv-4.6.0
+curl -L https://github.com/opencv/opencv_contrib/archive/4.6.0-o opencv_contrib-4.6.0
+unzip opencv-4.6.0
+unzip opencv_contrib-4.6.0
 
-cd opencv-3.4.16/
+cd opencv-4.6.0
 
 echo "** Apply patch"
 sed -i 's/include <Eigen\/Core>/include <eigen3\/Eigen\/Core>/g' modules/core/include/opencv2/core/private.hpp
